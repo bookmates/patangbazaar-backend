@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
   res.send('Hello Express app!')
 });
 
+const PORT = 3000
 
 const cors = require('cors')
 app.use(cors())
@@ -38,6 +39,6 @@ app.use('/user/wishlist', authVerify, wishlistRouter)
 app.use(routeNotFound)
 app.use(errorHandler)
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log('server started');
 });
